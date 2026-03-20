@@ -12,9 +12,18 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/view/TelaInicial.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/dao/ClienteDAO.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/dao/Conexao.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/dao/TrabalhadorDAO.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/main/FreelaApp.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/model/Cliente.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/model/PedidoTrabalho.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/model/Perfil.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/model/TipoTrabalho.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/model/Trabalhador.java</file>
             <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/view/TelaCadastroConta.java</file>
             <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/view/TelaCadastroDados.java</file>
+            <file>file:/C:/Dev/NetBeansProjects/FreelaApp/src/br/com/freela/view/TelaInicial.java</file>
         </group>
     </open-files>
 </project-private>
