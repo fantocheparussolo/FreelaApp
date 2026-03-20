@@ -7,12 +7,11 @@ import java.sql.SQLException;
 public class TrabalhadorDAO {
 
     public void cadastrarTrabalhador(String nome, String cpf, String rg, String cidade,
-                                     String email, String senha, String telefone, String tipoTrabalho) {
+            String email, String senha, String telefone, String tipoTrabalho) {
 
         String sql = "INSERT INTO trabalhador (nomeTrabalhador, cpfTrabalhador, rgTrabalhador, cidadeTrabalhador, emailTrabalhador, telefoneTrabalhador, tipo_de_trabalho, senhaTrabalhador) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try (Connection conn = Conexao.conectar();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = Conexao.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, nome);
             stmt.setString(2, cpf);

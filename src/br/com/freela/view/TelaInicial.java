@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Lucas
  */
 public class TelaInicial extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaInicial.class.getName());
 
     /**
@@ -166,7 +166,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         String email = txtLogin.getText();
         String senha = new String(txtSenha.getPassword());
-        
+
         if (email.isEmpty() || senha.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Preencha e-mail e senha para entrar.");
         } else {

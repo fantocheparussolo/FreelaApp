@@ -1,6 +1,7 @@
 package br.com.freela.model;
 
 public class Perfil {
+
     private int idPerfil;
     private String nomePerfil;
     private String cpfPerfil;
@@ -52,14 +53,13 @@ public class Perfil {
     public String getTelefone() {
         return telefonePerfil;
     }
-    
+
     public void exibirPerfil() {
         System.out.println("ID: " + idPerfil);
         System.out.println("Nome: " + nomePerfil);
         System.out.println("Cidade: " + cidadePerfil);
         System.out.println("E-mail: " + emailPerfil);
         System.out.println("Telefone: " + telefonePerfil);
-        
-        
+
     }
 }

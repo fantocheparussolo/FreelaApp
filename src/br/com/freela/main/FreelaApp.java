@@ -10,7 +10,7 @@ public class FreelaApp {
             public void run() {
                 new TelaInicial().setVisible(true);
             }
-        });   
+        });
     }
-    
+
 }

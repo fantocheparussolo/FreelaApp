@@ -3,6 +3,7 @@ package br.com.freela.model;
 import br.com.freela.model.Cliente;
 
 public class PedidoTrabalho {
+
     private int idPedido;
     private Cliente cliente;
     private Trabalhador trabalhador;
@@ -48,19 +49,19 @@ public class PedidoTrabalho {
     public double getValorProposto() {
         return valorProposto;
     }
-    
+
     public void confirmarPedido() {
         this.status = "Confirmado";
     }
-    
+
     public void cancelarPedido() {
         if (!status.equals("Confirmado")) {
             this.status = "Cancelado";
-        } else { 
+        } else {
             System.out.println("Não é possível cancelar um pedidio já confirmado.");
         }
     }
-    
+
     public void exibirPedido() {
         System.out.println("Pedido: " + idPedido);
         System.out.println("Cliente: " + cliente.getNome());
@@ -69,12 +70,7 @@ public class PedidoTrabalho {
         System.out.println("Local: " + local);
         System.out.println("Valor proposto: R$ " + valorProposto);
         System.out.println("Status: " + status);
-        
-        
-        
-        
-        
+
     }
-    
-    
+
 }

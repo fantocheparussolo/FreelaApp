@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  * @author Lucas
  */
 public class TelaCadastroDados extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaCadastroDados.class.getName());
 
     private String email;
     private String senha;
-    
+
     /**
      * Creates new form TelaCadastroForm2
      */
@@ -27,7 +27,7 @@ public class TelaCadastroDados extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         atualizarCampoTipoTrabalho();
     }
-    
+
     public TelaCadastroDados(String email, String senha) {
         initComponents();
         this.email = email;
@@ -279,46 +279,46 @@ public class TelaCadastroDados extends javax.swing.JFrame {
 
     private void btnAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvancarActionPerformed
         String nome = txtNome.getText();
-    String telefone = txtTelefone.getText();
-    String cpf = txtCPF.getText();
-    String rg = txtRG.getText();
-    String cidade = txtCidade.getText();
-    String tipoTrabalho = txtTipoTrabalho.getText();
-    String tipo = cmbTipoCadastro.getSelectedItem().toString();
+        String telefone = txtTelefone.getText();
+        String cpf = txtCPF.getText();
+        String rg = txtRG.getText();
+        String cidade = txtCidade.getText();
+        String tipoTrabalho = txtTipoTrabalho.getText();
+        String tipo = cmbTipoCadastro.getSelectedItem().toString();
 
-    if (nome.isEmpty() || telefone.isEmpty() || cpf.isEmpty() || rg.isEmpty() || cidade.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Preencha todos os campos obrigatórios.");
-        return;
-    }
-
-    if (tipo.equals("Trabalhador") && tipoTrabalho.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Informe o tipo de trabalho do trabalhador.");
-        return;
-    }
-
-    try {
-        if (tipo.equals("Cliente")) {
-            ClienteDAO dao = new ClienteDAO();
-            dao.cadastrarCliente(nome, cpf, rg, cidade, email, senha, telefone);
-
-            JOptionPane.showMessageDialog(this, "Cliente cadastrado com sucesso!");
-        } else {
-            TrabalhadorDAO dao = new TrabalhadorDAO();
-            dao.cadastrarTrabalhador(nome, cpf, rg, cidade, email, senha, telefone, tipoTrabalho);
-
-            JOptionPane.showMessageDialog(this, "Trabalhador cadastrado com sucesso!");
+        if (nome.isEmpty() || telefone.isEmpty() || cpf.isEmpty() || rg.isEmpty() || cidade.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos obrigatórios.");
+            return;
         }
 
-        new TelaInicial().setVisible(true);
-        this.dispose();
+        if (tipo.equals("Trabalhador") && tipoTrabalho.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Informe o tipo de trabalho do trabalhador.");
+            return;
+        }
 
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Erro: " + e.getMessage());
-    }
+        try {
+            if (tipo.equals("Cliente")) {
+                ClienteDAO dao = new ClienteDAO();
+                dao.cadastrarCliente(nome, cpf, rg, cidade, email, senha, telefone);
+
+                JOptionPane.showMessageDialog(this, "Cliente cadastrado com sucesso!");
+            } else {
+                TrabalhadorDAO dao = new TrabalhadorDAO();
+                dao.cadastrarTrabalhador(nome, cpf, rg, cidade, email, senha, telefone, tipoTrabalho);
+
+                JOptionPane.showMessageDialog(this, "Trabalhador cadastrado com sucesso!");
+            }
+
+            new TelaInicial().setVisible(true);
+            this.dispose();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro: " + e.getMessage());
+        }
     }//GEN-LAST:event_btnAvancarActionPerformed
 
     private void cmbTipoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoCadastroActionPerformed
-     atualizarCampoTipoTrabalho();
+        atualizarCampoTipoTrabalho();
     }//GEN-LAST:event_cmbTipoCadastroActionPerformed
 
     /**
@@ -370,19 +370,17 @@ public class TelaCadastroDados extends javax.swing.JFrame {
     private javax.swing.JTextField txtTipoTrabalho;
     // End of variables declaration//GEN-END:variables
 
-private void atualizarCampoTipoTrabalho() {
-    String tipoSelecionado = cmbTipoCadastro.getSelectedItem().toString();
+    private void atualizarCampoTipoTrabalho() {
+        String tipoSelecionado = cmbTipoCadastro.getSelectedItem().toString();
 
-    if (tipoSelecionado.equals("Trabalhador")) {
-        lblTipoTrabalho.setVisible(true);
-        txtTipoTrabalho.setVisible(true);
-    } else {
-        lblTipoTrabalho.setVisible(false);
-        txtTipoTrabalho.setVisible(false);
-        txtTipoTrabalho.setText("");
+        if (tipoSelecionado.equals("Trabalhador")) {
+            lblTipoTrabalho.setVisible(true);
+            txtTipoTrabalho.setVisible(true);
+        } else {
+            lblTipoTrabalho.setVisible(false);
+            txtTipoTrabalho.setVisible(false);
+            txtTipoTrabalho.setText("");
+        }
     }
-}
 
 }
-
-

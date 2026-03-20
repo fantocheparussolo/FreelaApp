@@ -1,6 +1,7 @@
 package br.com.freela.model;
 
 public class TipoTrabalho {
+
     private int idTrabalho;
     private String nomeTrabalho;
     private String descricaoTrabalho;
@@ -22,11 +23,10 @@ public class TipoTrabalho {
     public String getDescricaoTrabalho() {
         return descricaoTrabalho;
     }
-    
+
     public void exibirInformacao() {
         System.out.println("Tipo de trabalho: " + nomeTrabalho);
         System.out.println("Descrição do trabalho: " + descricaoTrabalho);
     }
-    
-    
+
 }

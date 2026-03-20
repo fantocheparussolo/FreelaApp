@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
  * @author Lucas
  */
 public class TelaCadastroConta extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaCadastroConta.class.getName());
- 
+
     /**
      * Creates new form TelaCadastroForm1
      */
@@ -188,13 +188,13 @@ public class TelaCadastroConta extends javax.swing.JFrame {
     private void btnPaginaInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaginaInicialActionPerformed
         TelaInicial tela = new TelaInicial();
         tela.setVisible(true);
-        this.dispose();  
+        this.dispose();
     }//GEN-LAST:event_btnPaginaInicialActionPerformed
 
     private void btnAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvancarActionPerformed
         String email = txtEmail.getText();
         String senha = new String(txtSenha.getPassword());
-        
+
         if (email.isEmpty() || senha.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Preencha e-mail e senha para continuar.");
         } else {
